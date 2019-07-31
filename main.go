@@ -12,8 +12,10 @@ import (
 
 
 func ProfileHandler(c *gin.Context) {
-  c.Header("Content-Type", "text/html")
-  c.HTML(http.StatusOK, "profile.html", nil)
+  c.Header("Content-Type", "application/json")
+  c.JSON(http.StatusOK, gin.H {
+    "message": "Profile handler not implemented yet",
+  })
 }
 
 func FollowProfileHandler(c *gin.Context) {

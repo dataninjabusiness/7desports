@@ -69,9 +69,9 @@ func main() {
     // api.GET("/users/username", users.GetUserByUserName(db))
     // api.POST("/users/create", users.CreateUser(db))
     api.GET("/profile", ProfileHandler)
-    api.POST("/profile/follow/", FollowProfileHandler)
-    api.POST("/profile/wallPost", WallPostHandler)
-    api.POST("/profile/wallPost/like", LikeWallPostHandler)
+    api.POST("/profile/follow/:profileID", FollowProfileHandler)
+    // api.POST("/profile/wallPost", WallPostHandler)
+    // api.POST("/profile/wallPost/like", LikeWallPostHandler)
   }
 
 	router.Run(":" + port)

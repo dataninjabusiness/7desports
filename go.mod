@@ -3,6 +3,7 @@ module github.com/dataninjabusiness/7desports
 go 1.12
 
 require (
+	github.com/gin-gonic/contrib v0.0.0-20190526021735-7fb7810ed2a0
 	github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
 	github.com/heroku/x v0.0.0-20171004170240-705849e307dd
 	github.com/manucorporat/sse v0.0.0-20150604091100-c142f0f1baea // indirect

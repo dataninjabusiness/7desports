@@ -1,3 +1,5 @@
+# github.com/gin-gonic/contrib v0.0.0-20190526021735-7fb7810ed2a0
+github.com/gin-gonic/contrib/static
 # github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
 github.com/gin-gonic/gin
 github.com/gin-gonic/gin/binding

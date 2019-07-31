@@ -71,7 +71,7 @@ func main() {
     api.GET("/profile", ProfileHandler)
     api.POST("/profile/follow/:profileID", FollowProfileHandler)
     api.POST("/profile/wallPost/:profileID", WallPostHandler)
-    api.POST("/profile/wallPost/like/:wallpostID", LikeWallPostHandler)
+    api.POST("/profile/wallPost/like/:wallPostID", LikeWallPostHandler)
   }
 
 	router.Run(":" + port)

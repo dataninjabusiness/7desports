@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+  "github.com/gin-gonic/contrib/static"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
@@ -18,14 +19,14 @@ func main() {
 
 	router := gin.Default()
 	router.Use(gin.Logger())
-	// router.LoadHTMLGlob("templates/*.tmpl.html")
+	router.LoadHTMLGlob("templates/*.tmpl.html")
 	router.Static("/static", "static")
-	router.Static("/views", "views")
+  
+	router.Use(static.Serve("/", static.LocalFile("./views", true)))
 
-	router.GET("/", func(c *gin.Context) {
-		// c.HTML(http.StatusOK, "index.tmpl.html", nil)
-		c.HTML(http.StatusOK, "index.html", nil)
-	})
+	// router.GET("/", func(c *gin.Context) {
+	// 	c.HTML(http.StatusOK, "index.tmpl.html", nil)
+	// })
 
   api := router.Group("/api")
   {
